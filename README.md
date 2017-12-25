@@ -1,8 +1,1 @@
-Demo: [http://webjeda.com/bheema](http://webjeda.com/bheema)
-
-## Installation
-* Fork the repository
-* Go to settings and set Github Pages source as master.
-* Your new site should be ready.
-
-For more themes visit - [https://jekyll-themes.com](https://jekyll-themes.com)
+This is my personal website to host and display my projects. The theme is a mixture of [minima](https://github.com/jekyll/minima) and [bheema](https://github.com/sharu725/bheema). Bheema was used for the home page to get the grid layout since I thought it looked nice. 
