@@ -1,0 +1,11 @@
+- title: "About Me"
+  href: "/about/"
+
+- title: "CV"
+  href: "/resources/dkristensen_cv.pdf"
+
+- title: "Research & Projects"
+  href: "/projects/"
+
+- title: "Contact Me"
+  href: "/contact/"

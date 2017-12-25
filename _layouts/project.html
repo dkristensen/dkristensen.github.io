@@ -1,0 +1,118 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function showPres() {
+                var x = document.getElementById("slides");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+                var y = document.getElementById("paper");
+                if(y != null){
+                    y.style.display = "none";
+                }
+                var z = document.getElementById("poster");
+                if(z != null){
+                    z.style.display = "none";
+                }
+                
+            }
+            function showPaper() {
+                var x = document.getElementById("paper");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+                var y = document.getElementById("slides");
+                if(!(y === null)){
+                    y.style.display = "none";
+                }
+                var z = document.getElementById("poster");
+                if(z != null){
+                    z.style.display = "none";
+                }
+            }
+            function showPoster() {
+                var x = document.getElementById("poster");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+                var y = document.getElementById("slides");
+                if(y != null){
+                    y.style.display = "none";
+                }
+                var z = document.getElementById("paper");
+                if(z != null){
+                    z.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+{% include head.html %}
+<body>
+    {% include header.html %}
+<div class="container partition">
+{% if page.img %}
+<div class="page-image" style="background-image: url({{site.baseurl}}/img/{{page.img}})"></div>
+{% else %}
+{% endif %}
+       <div class="row" style="margin-top: 2em">
+        <div class="container page-container">
+       
+           <h1 class="page-title">{{page.title}}</h1>
+         
+          {{ content }}
+
+            <div class="button_wrapper">
+            {% if page.paper %}          
+            <button onclick="showPaper()" class="button-primary" style="align:center; margin-right:5px; margin-left:5px; width:30%">
+                Paper
+            </button>
+            {% else %}
+            {% endif %}
+            
+            {% if page.slides %}
+            <button onclick="showPres()" class="button-primary" style="align:center; margin-right:5px; margin-left:5px; width:30%">
+                Presentation
+            </button>
+            {% else %}
+            {% endif %}
+            
+            {% if page.poster %}
+            <button onclick="showPoster()" class="button-primary" style="align:center; margin-right:5px; margin-left:5px; width:30%">
+                Poster
+            </button>
+            {% else %}
+            {% endif %}
+            </div>
+
+            {% if page.paper %}  
+            <iframe id = "paper" class="paper" src={{page.paper}} style="display:none"></iframe>
+            {% else %}
+            {% endif %}
+
+            {% if page.slides %}
+            <iframe id= "slides" class="slides" src={{page.slides}} style="display:none"></iframe>
+            {% else %}
+            {% endif %}
+
+            {% if page.poster %}
+            <iframe id="poster" class="poster" src={{page.poster}} style="display:none"\></iframe>
+            {% else %}
+            {% endif %}
+          
+          </div>
+    </div>
+
+</div>
+{% include footer.html %}
+</body>
+</html>
