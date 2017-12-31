@@ -1,0 +1,38 @@
+<!-- Work prepping for a prettier landing page that can handle a dynamic number of posts -->
+<!DOCTYPE html>
+{% assign num_posts = site.posts|size %}
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {% for i in num_posts %}
+            {% if i==0 %}
+            <!-- {% use about %} -->
+            {% elseif i%14 <2 %}
+            <!-- {% use 0 %} -->
+            {% elseif i%14 <4 %}
+            <!-- {% use 2 %} -->
+            {% elseif i%14 <7 %}
+            <!-- {% use 1 %} -->
+            {% elseif i%14 <9 %}
+            <!-- {% use 3 %} -->
+            {% elseif i%14 <11 %}
+            ]<!-- {% use 1 %} -->
+            {% else%}
+            <!-- {% use 4 %} -->
+            {% endif %}
+        {% endfor %}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

@@ -241,13 +241,13 @@ pre {
     }
 }
 .four.border {
-    border-right: 2px solid #f1b52e;
+    border-right: 2px solid #279af1;//f1b52e;
         @include media-query($on-palm) {
         border-right: none;
     }
 }
 .border-2 {
-        border-right: 2px solid #e76d53;
+        border-right: 2px solid #279af1;//e76d53;
         @include media-query($on-palm) {
         border-right: none;
     }
