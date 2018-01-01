@@ -1,25 +1,36 @@
 
 .half{
+    @include media-query($on-palm) {
+        width: 100%;
+    }
     width: 50%;
 }
 
 .one-third{
+    @include media-query($on-palm) {
+        width: 100%;
+    }
     width:33.333%;
 }
 
 .two-thirds{
+    @include media-query($on-palm) {
+        width: 100%;
+    }
     width:66.667%;
 }
 
-// .center-piece{
+.center-piece{
+    box-sizing: border-box;
+    float:left;
+}
 
-//     align:center;
-// }
+.right-piece{
+    box-sizing: border-box;
+    float:left;
+}
 
-// .right-piece{
-//     align:right;
-// }
-
-// .left-piece{
-//     align:left;
-// }
+.left-piece{
+    box-sizing: border-box;
+    float:left;
+}
