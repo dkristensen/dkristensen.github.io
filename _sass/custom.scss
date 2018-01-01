@@ -22,15 +22,33 @@
 
 .center-piece{
     box-sizing: border-box;
+    border-right:2px solid #01a801;
+    border-top:2px solid #01a801;
     float:left;
+    @include media-query($on-palm) {
+        border-right: none;
+        border-top: none;
+    }
 }
 
 .right-piece{
     box-sizing: border-box;
+    border-right:2px solid #dde00a;
+    border-top:2px solid #dde00a;
     float:left;
+    @include media-query($on-palm) {
+        border-right: none;
+        border-top: none;
+    }
 }
 
 .left-piece{
     box-sizing: border-box;
+    border-right:2px solid #0295cf;
+    border-top:2px solid #0295cf;
     float:left;
+    @include media-query($on-palm) {
+        border-right: none;
+        border-top: none;
+    }
 }

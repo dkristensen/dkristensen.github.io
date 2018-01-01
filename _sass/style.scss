@@ -238,7 +238,7 @@ pre {
 }
 
 .border {
-    border: 2px solid black;
+    border: 2px solid transparent;
     @include media-query($on-palm) {
         border-right: none;
     }
