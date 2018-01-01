@@ -207,8 +207,11 @@ pre {
 /* Adjust columns */
 @media (min-width: 550px) {
 .eight.columns.news-piece{
-    width: 66.66666%;
-    
+    width: 66.66666%;  
+}
+
+.about-piece{
+    width: 100%;  
 }
 
 .four.columns.news-piece {

@@ -1,33 +1,152 @@
 <!-- Work prepping for a prettier landing page that can handle a dynamic number of posts -->
 <!DOCTYPE html>
-{% assign num_posts = site.posts|size %}
+{% assign num_posts = site.posts | size %}
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
+  <head><title>{{page.name}}</title></head>>
   {% include head.html %}
 
   <body>
-
+   
     {% include header.html %}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        {% for i in num_posts %}
-            {% if i==0 %}
-            <!-- {% use about %} -->
-            {% elseif i%14 <2 %}
-            <!-- {% use 0 %} -->
-            {% elseif i%14 <4 %}
-            <!-- {% use 2 %} -->
-            {% elseif i%14 <7 %}
-            <!-- {% use 1 %} -->
-            {% elseif i%14 <9 %}
-            <!-- {% use 3 %} -->
-            {% elseif i%14 <11 %}
-            ]<!-- {% use 1 %} -->
-            {% else%}
-            <!-- {% use 4 %} -->
-            {% endif %}
-        {% endfor %}
+            <div class="row first-row">
+                <a href="{{site.baseurl}}/about">
+                        <div class="about-piece news-piece news-piece-1 border" style="background-image: url({{site.baseurl}}/img/me.png)">
+                        <p class="news-title">About Me</p>
+                        <p class="news-exp">{{AboutMe.excerpt | strip_html | truncate: 80 }}</p>
+                        </div>
+                </a>
+            </div>
+            {% for i in (0 .. num_posts) %}
+                {% assign index = i|modulo:12 %}
+                {% if index<2 %}
+                    <!-- use 2 -->
+                    <div class=" row row-border">
+                        <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                                <div class="half left-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                    <p class="news-title">{{site.posts[i].title}}</p>
+                                    <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                                </div>
+                        </a>
+                        {{i}}
+                {% assign i = i | plus:1 %} 
+                        {{i}}
+                        {% if i < num_posts %}
+                        <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                                <div class="half right-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                    <p class="news-title">{{site.posts[i].title}}</p>
+                                    <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                                </div>
+                        </a>
+                        {% else %}
+                        {% endif %}
+                    </div>
+                
+                {% elsif index<5 %}
+                <!-- use 1 -->
+                    <div class=" row row-border">
+                        <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                                <div class="one-third left-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                    <p class="news-title">{{site.posts[i].title}}</p>
+                                    <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                                </div>
+                        </a>
+                {% assign i = i | plus:1%} 
+                    {% if i < num_posts %}
+                        <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                                <div class="one-third center-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                    <p class="news-title">{{site.posts[i].title}}</p>
+                                    <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                                </div>
+                        </a>
+                    {% else %}
+                    {% endif %}
+                    {% assign i = i|plus:1%} 
+                    {% if i < num_posts %}
+                        <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                                <div class="one-third right-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                    <p class="news-title">{{site.posts[i].title}}</p>
+                                    <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                                </div>
+                        </a>
+                    {% else %}
+                    {% endif %}
+                    </div>
+                    {% assign i = i| plus:1%} 
+                {% elsif index<7 %}
+                <!-- use 3 -->
+                <div class=" row row-border">
+                    <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                            <div class="two-thirds left-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                <p class="news-title">{{site.posts[i].title}}</p>
+                                <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                            </div>
+                    </a>
+                {% assign i = i|plus:1%} 
+                {% if i < num_posts %}
+                    <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                            <div class="one-third right-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                <p class="news-title">{{site.posts[i].title}}</p>
+                                <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                            </div>
+                    </a>
+                    {% else %}
+                    {% endif %}
+                    </div>
+                {% elsif index<10 %}
+                <!-- use 1 -->
+                <div class=" row row-border">
+                    <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                            <div class="one-third left-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                <p class="news-title">{{site.posts[i].title}}</p>
+                                <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                            </div>
+                    </a>
+                {% assign i = i|plus:1%} 
+                {% if i < num_posts %}
+                    <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                            <div class="one-third center-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                <p class="news-title">{{site.posts[i].title}}</p>
+                                <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                            </div>
+                    </a>
+                {% else %}
+                {% endif %}
+                {% assign i = i|plus:1%} 
+                {% if i < num_posts %}
+                    <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                            <div class="one-third right-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                <p class="news-title">{{site.posts[i].title}}</p>
+                                <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                            </div>
+                    </a>
+                {% else %}
+                {% endif %}
+                    </div>
+                {% else%}
+                <!-- use 4 -->
+                    <div class=" row row-border">
+                        <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                                <div class="one-third left-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                    <p class="news-title">{{site.posts[i].title}}</p>
+                                    <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                                </div>
+                        </a>
+                    {% assign i = i|plus:1%} 
+                    {% if i < num_posts %}
+                        <a href="{{site.baseurl}}{{site.posts[i].url}}">
+                                <div class="two-thirds right-piece news-piece news-piece-2 border" style="background-image: url({{site.baseurl}}/img/{{site.posts[i].img}});">
+                                    <p class="news-title">{{site.posts[i].title}}</p>
+                                    <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
+                                </div>
+                        </a>
+                    {% else %}
+                    {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
       </div>
     </main>
 
