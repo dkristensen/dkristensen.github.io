@@ -22,33 +22,41 @@
 
 .center-piece{
     box-sizing: border-box;
-    border-right:2px solid #01a801;
-    border-top:2px solid #01a801;
+    border:1px solid black;
     float:left;
     @include media-query($on-palm) {
-        border-right: none;
-        border-top: none;
+        border:2px solid black;
+        margin-top:2px;
+        margin-bottom:2px;
     }
 }
 
 .right-piece{
     box-sizing: border-box;
-    border-right:2px solid #dde00a;
-    border-top:2px solid #dde00a;
+    border:1px solid black;
     float:left;
     @include media-query($on-palm) {
-        border-right: none;
-        border-top: none;
+        border:2px solid black;
+        margin-top:2px;
+        margin-bottom:2px;
     }
 }
 
 .left-piece{
     box-sizing: border-box;
-    border-right:2px solid #0295cf;
-    border-top:2px solid #0295cf;
+    border:1px solid black;
     float:left;
     @include media-query($on-palm) {
-        border-right: none;
-        border-top: none;
+        margin-top:2px;
+        margin-bottom:2px;
+        border:2px solid black;
     }
 }
+
+
+.about-piece{
+    width: 100%;  
+    border:1px solid black;
+}
+
+
