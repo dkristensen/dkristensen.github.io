@@ -13,6 +13,8 @@ permalink: /projects/
 
 # Projects
 ---
+**The Intersection of Reinforcement Learning and Traffic Light Scheduling** Drew Kristensen, Capstone in Computer Science Independent Project (Spring 2018) [[Paper]](/resources/CS440/paper.pdf) [[Presentation]](/resources/CS440/presentation.pdf)
+
 **Introduction to Probability Theory in Bayesian Networks** Drew Kristensen, Probability Theory Term Paper (Fall 2017) [[Paper]](/resources/Math375/Bayesian_Networks_and_Probabilistic_Inference.pdf) [[Presentation]](/resources/Math375/Bayesian_Network_Presentation.pdf)
 
 **Detection and Enumeration of Stellar SeaLions from aerial photographs in the Bering Sea** Drew Kristensen, Patrick Ryan, Intro to Artificial Intelligence Term Project (Spring 2017) [[Source Code]](https://github.com/dkristensen/UPSCS431Final) [[Paper]](/resources/CS431/CS431_Final_Writeup.pdf) 
