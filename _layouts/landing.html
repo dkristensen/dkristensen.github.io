@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% assign num_posts = site.posts | size%}
+{% assign num_posts = site.posts | size | minus:1%}
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {% include head.html %}
 
@@ -37,7 +37,7 @@
                         <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
                         </div>
                         </a>
-                        {% if j < num_posts %}
+                        {% if j <= num_posts %}
                         <a href="{{site.baseurl}}{{site.posts[j].url}}">
                         <div class="half right-piece news-piece news-piece-2" style="background-image: url({{site.baseurl}}/img/{{site.posts[j].img}});">
                         <p class="news-title">{{site.posts[j].title}}</p>
@@ -57,7 +57,7 @@
                         <p class="news-exp">{{site.posts[i].excerpt | strip_html | truncate: 80 }}</p>
                         </div>
                         </a>
-                        {% if j < num_posts %}
+                        {% if j <= num_posts %}
                         <a href="{{site.baseurl}}{{site.posts[j].url}}">
                         <div class="one-third center-piece news-piece news-piece-2" style="background-image: url({{site.baseurl}}/img/{{site.posts[j].img}});">
                         <p class="news-title">{{site.posts[j].title}}</p>
@@ -66,7 +66,7 @@
                         </a>
                         {% else %}
                         {% endif %}
-                        {% if k < num_posts %}
+                        {% if k <= num_posts %}
                         <a href="{{site.baseurl}}{{site.posts[k].url}}">
                         <div class="one-third right-piece news-piece news-piece-2" style="background-image: url({{site.baseurl}}/img/{{site.posts[k].img}});">
                         <p class="news-title">{{site.posts[k].title}}</p>
@@ -86,7 +86,7 @@
                         </div>
                     </a>
                 {% assign j = i|plus:1%} 
-                {% if j < num_posts %}
+                {% if j <= num_posts %}
                     <a href="{{site.baseurl}}{{site.posts[j].url}}">
                         <div class="one-third right-piece news-piece news-piece-2" style="background-image: url({{site.baseurl}}/img/{{site.posts[j].img}});">
                             <p class="news-title">{{site.posts[j].title}}</p>
@@ -106,7 +106,7 @@
                         </div>
                     </a>
                     
-                    {% if j < num_posts %}
+                    {% if j <= num_posts %}
                     <a href="{{site.baseurl}}{{site.posts[j].url}}">
                         <div class="one-third center-piece news-piece news-piece-2" style="background-image: url({{site.baseurl}}/img/{{site.posts[j].img}});">
                             <p class="news-title">{{site.posts[j].title}}</p>
@@ -116,7 +116,7 @@
                     {% else %}
                     {% endif %}
 
-                    {% if k < num_posts %}
+                    {% if k <= num_posts %}
                     <a href="{{site.baseurl}}{{site.posts[k].url}}">
                         <div class="one-third right-piece news-piece news-piece-2" style="background-image: url({{site.baseurl}}/img/{{site.posts[k].img}});">
                             <p class="news-title">{{site.posts[k].title}}</p>
@@ -136,7 +136,7 @@
                             </div>
                         </a>
                     {% assign j = i|plus:1%} 
-                    {% if j < num_posts %}
+                    {% if j <= num_posts %}
                         <a href="{{site.baseurl}}{{site.posts[j].url}}">
                             <div class="two-thirds right-piece news-piece news-piece-2" style="background-image: url({{site.baseurl}}/img/{{site.posts[j].img}});">
                                 <p class="news-title">{{site.posts[j].title}}</p>

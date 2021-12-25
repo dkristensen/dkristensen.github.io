@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Exploring the effects of different reward function on TSCA learning process
-img: Capstone.png
+img: comp767.png
 paper: ../../../../../resources/Comp767/final.pdf
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Predicting User Features from Social Media data
-img: Capstone.png
+img: data_science.png
 paper: ../../../../../resources/IFT6758/Data_Science_project.pdf
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Probabilistic Graphical Models Final Project
-img: Capstone.png
+img: PGM_project.png
 paper: ../../../../../resources/IFT6269/PGM_project.pdf
 ---
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% assign about_imgs = site.static_files | where: "about", true %}
+{% assign num_pictures = about_imgs | size %}
+<html>
+{% include head.html %}
+<body>
+    {% include header.html %}
+<div class="container partition">
+
+       <div class="row" style="margin-top: 2em">
+        <div class="container page-container">
+       
+           <h1 class="page-title">{{page.title}}</h1>
+         
+           {% if num_pictures > 0 %}
+                <div class="gallery_container">
+                    {% for img in about_imgs %}
+                        <div class="gallery_slide animated">
+                            <img src={{img.path}} style="height:100%">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+          {{ content }}
+          
+          
+          </div>
+    </div>
+
+</div>
+{% include footer.html %}
+<script src="{{ base.url | prepend: site.url }}/assets/js/gallery.js"></script> 
+</body>
+</html>

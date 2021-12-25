@@ -54,9 +54,45 @@
 }
 
 
+// About CSS
 .about-piece{
     width: 100%;  
     border:1px solid black;
 }
+
+.gallery_container{
+    margin-left:auto;
+    margin-right: auto;
+    height: 320px;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 1em;
+    @include media-query($on-palm) {
+       height: 200px; 
+    }
+    display:flex;
+}
+
+.gallery_slide{
+    display:none;
+}
+
+.animated {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes animated {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+@keyframes animated {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
 
 

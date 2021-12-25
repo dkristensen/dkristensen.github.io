@@ -6,7 +6,7 @@ permalink: /projects/
 
 # Research
 ---
-**On inverse reinforcement learning and dynamic discrete choice for predicting path choices** Drew Kristensen, Emma Frejinger. University of Montreal Masters Thesis, November 2021.[[Paper]](/resources/MastersThesis/kristensen_frejinger.pdf)
+**On inverse reinforcement learning and dynamic discrete choice for predicting path choices** Drew Kristensen, Emma Frejinger. University of Montreal Masters Thesis, November 2021. [[Paper]](/resources/MastersThesis/Kristensen_Drew_2021_memoire.pdf)
 
 **Deep Learning to Extract Laboratory Mouse Ultrasonic Vocalizations from Scalograms**  Adam A Smith, Drew Kristensen. IEEE Bioinformatics and Biomedicine (BIBM), November 2017 (McCormick Research Grant - Summer 2017) [[Paper]](/resources/SummerResearch17/smith_kristensen.pdf) [[Poster]](/resources/SummerResearch17/poster.pdf) [[Presentation]](/resources/SummerResearch17/presentation.pdf)
 
@@ -18,7 +18,7 @@ permalink: /projects/
 **Predicting User Features from Social Media data** Fracois Mercier, Nicolas Sauthier, Zicong Mo, Drew Kristensen, Yifan Bai. Final project for IFT-6758, Data Science, at the University of Montreal (December 2019) [[Paper]](/resources/IFT6758/Data_Science_project.pdf)
 
 **Exploring the effects of different reward function on TSCA learning process** Drew Kristensen, Final project for Comp-767, Reinforcement Learning, at McGill University (April 2019) [[Paper]](/resources/Comp767/final.pdf)
-[[Github]](https://github.com/dkristensen/Comp_767_Final.pdf)
+[[Github]](https://github.com/dkristensen/Comp_767_Final)
 
 **Probabilistic Graphical Models Final Project** Drew Kristensen, Antoine Chehire, Abel Nabli. Final Project for IFT-6269, Probabilistic Graphical Models, at the University of Montreal (November 2018) [[Paper]](/resources/IFT6269/PGM_project.pdf)
 

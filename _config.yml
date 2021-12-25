@@ -1,8 +1,8 @@
 
 title: Drew Kristensen
-email: dkristensen@pugetsound.edu
+email: drew.kristensen@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Student, University of Puget Sound '18
+  Masters Graduate, University of Montreal '21
 baseurl: "" 
 url: "" 
 github_username:  dkristensen
@@ -10,7 +10,12 @@ github_username:  dkristensen
 sass:
  style: compressed
  
- 
+defaults:
+  - scope:
+      path: "img/about"
+    values:
+      about: true
+
 # Tracker
 analytics: UA-83979019-1
  
