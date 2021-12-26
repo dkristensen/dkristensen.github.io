@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% assign about_imgs = site.static_files | where: "about", true %}
-{% assign num_pictures = about_imgs | size %}
+{% assign num_pictures = about_imgs | size%}
 <html>
 {% include head.html %}
 <body>
@@ -13,13 +13,26 @@
            <h1 class="page-title">{{page.title}}</h1>
          
            {% if num_pictures > 0 %}
-                <div class="gallery_container">
-                    {% for img in about_imgs %}
-                        <div class="gallery_slide animated">
-                            <img src={{img.path}} style="height:100%">
-                        </div>
-                    {% endfor %}
+                <div class="carousel_div">
+                    <div class="gallery_container">
+
+                        {% for img in about_imgs %}
+                            <div class="gallery_slide animated">
+                                <img src={{img.path}} style="height:100%">
+                            </div>
+                        {% endfor %}
+                        
+                        
+                    </div>
+                    <div class="gallery_dots" style="text-align:center">
+                        {% for i in (1 .. num_pictures) %}
+                            <span class="dot" onclick="currentSlide({{i}});"></span>
+                        {% endfor %}
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1);">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1);">&#10095;</a>
                 </div>
+                <br>
             {% endif %}
 
           {{ content }}

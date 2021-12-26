@@ -161,11 +161,15 @@ pre {
     background-size: cover;
     background-position: center;
     position: relative;
+    transition: all 0.4s ease-in-out;
     &:hover{
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
+        transform: scale(1.05);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        z-index: 1000;
     }
 }
+
+
 .news-piece-1 {
     height: 350px;
     

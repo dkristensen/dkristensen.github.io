@@ -4,9 +4,8 @@ title:  "Sea Lion Enumeration"
 categories: jekyll update
 img: sea_lion.png
 paper: ../../../../../resources/CS431/CS431_Final_Writeup.pdf
+slides: ../../../../../resources/CS431/presentation.pdf
 ---
-
-# Abstract
 
 We trained a convolution neural network on examples of both sea lions of all types as well as on sections of the images that didn’t pertain to sea lions. On our test data, we achieved a 10% error rate whereas on the raw images themselves, we had around 40% error rate. Our network consisted of three convolution layers, each paired with a pooling layer,and two hidden layers with 256 and 128 neurons respectively.
 

@@ -9,7 +9,6 @@ paper: ../../../../../resources/SummerResearch17/smith_kristensen.pdf
 poster: ../../../../../resources/SummerResearch17/poster.pdf
 ---
 
-# Abstract
 We tested two techniques that can assist in the
 automatic extraction and analysis of laboratory mouse ultrasonic
 vocalizations. First, we substituted a Morlet-wavelet-based scalogram
