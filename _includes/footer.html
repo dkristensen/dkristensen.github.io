@@ -24,27 +24,35 @@
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username="Github" %}
+            {% include icon-github.html username=site.github_username site="Github"%}
           </li>
           {% endif %}
 
           {% if site.twitter_username %}
           <li>
-            {% include icon-twitter.html username="Twitter" %}
+            {% include icon-twitter.html username=site.twitter_username site="Twitter"%}
           </li>
           {% endif %}
 
           {% if site.linkedin_username %}
           <li>
-            {% include icon-linkedin.html username="LinkedIn" %}
+            {% include icon-linkedin.html username=site.linkedin_username site="LinkedIn"%}
           </li>
           {% endif %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-3" align="right">
-        <p>{{ site.description | escape }}</p>
-        <p> ORCID: <a href="https://orcid.org/0000-0001-5540-5011">{{site.orcid}}</a></p>
+          <ul class="description-list">
+              <li>
+                {{ site.description | escape }}
+              </li>
+              <li>
+                ORCID: <a href="https://orcid.org/0000-0001-5540-5011">{{site.orcid}}</a>
+              </li>
+          </ul>
+        <!-- <p>{{ site.description | escape }}</p>
+        <p> ORCID: <a href="https://orcid.org/0000-0001-5540-5011">{{site.orcid}}</a></p> -->
       </div>
     </div>
 
