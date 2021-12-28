@@ -60,7 +60,7 @@
       float: right;
       width: 36px;
       height: 36px;
-      z-index: 2;
+      z-index: 50;
       cursor: pointer;
     }
 
@@ -107,7 +107,7 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  padding: 1.5*$spacing-unit 0;
 }
 
 .footer-heading {

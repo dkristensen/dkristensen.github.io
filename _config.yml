@@ -6,6 +6,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" 
 url: "" 
 github_username:  dkristensen
+linkedin_username: drew-kristensen
+orcid: 0000-0001-5540-5011
 
 sass:
  style: compressed
